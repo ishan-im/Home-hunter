@@ -4,7 +4,7 @@ import { ImCancelCircle } from "react-icons/im";
 // import link
 import { Link } from "react-router-dom";
 // import logo
-import Logo from "../assets/img/logo.svg";
+// import Logo from "../assets/img/logo.svg";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,8 +12,9 @@ const Header = () => {
     <header className="py-6 mb-12 border-b">
       <div className="container mx-auto flex justify-between items-center">
         <Link to="/">
-          <img src={Logo} alt="" />
-         
+          <h6 className='text-4xl  font-semibold leading-none '>
+            HomeHunter<span className='text-violet-700'>.</span>
+          </h6>
         </Link>
         <div className="hidden sm:flex items-center gap-6">
           <Link className="hover:text-violet-900 transition" to="/addprop">

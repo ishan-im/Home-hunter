@@ -4,7 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import AddProperty from './pages/AddProperty';
-import Favourites from './pages/Favourites';
+
 
 // import pages
 import Home from './pages/Home';
@@ -16,7 +16,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/fav' element={<Favourites/>} />
+        <Route path='/' element={<Home/>} />
         <Route path='/addprop' element={<AddProperty />} />
         <Route path='/property/:id' element={<PropertyDetails />} />
       </Routes>

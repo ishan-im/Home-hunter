@@ -11,9 +11,9 @@ const HouseContextProvider = ({ children }) => {
   const [houses, setHouses] = useState(housesData);
   const [country, setCountry] = useState("Location (any)");
   const [countries, setCountries] = useState([]);
-  const [property, setProperty] = useState("Property type (any)");
+  const [property, setProperty] = useState("Property (any)");
   const [properties, setProperties] = useState([]);
-  const [category, setCategory] = useState("Category type (any)");
+  const [category, setCategory] = useState("Category (any)");
   const [categories, setCategories] = useState([]);
   const [price, setPrice] = useState("Price range (any)");
   const [loading, setLoading] = useState(false);
@@ -38,7 +38,7 @@ const HouseContextProvider = ({ children }) => {
     });
 
     // remove duplicates
-    const uniqueProperties = ["Property type (any)", ...new Set(allProperties)];
+    const uniqueProperties = ["Property (any)", ...new Set(allProperties)];
 
     // set countries state
     setProperties(uniqueProperties);
@@ -67,6 +67,7 @@ const HouseContextProvider = ({ children }) => {
     // get first string (price) and parse it to number
     const minPrice = parseInt(price.split(" ")[0]);
     console.log(minPrice);
+    
     // get last string (price) and parse it to number
     const maxPrice = parseInt(price.split(" ")[2]);
     console.log(maxPrice);
